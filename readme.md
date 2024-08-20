@@ -91,7 +91,7 @@ The project is divided into two main directories:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/skp3214/AssessNet.git
+   git clone https://github.com/skp3214/AssessNet-CipherSchools.git
    cd quiz-platform
    ```
 
