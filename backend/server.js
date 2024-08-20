@@ -7,6 +7,7 @@ import cors from "cors";
 dotenv.config();
 const app=express();
 
+
 const allowedOrigins = ['https://assessnet.vercel.app'];
 
 app.use(cors({
@@ -19,16 +20,33 @@ app.use(cors({
         return callback(null, true);
     },
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
-    credentials: true, // Ensure this is set to true
-    allowedHeaders: 'Content-Type, Authorization,authtoken',
+    credentials: true,
+    allowedHeaders: 'Content-Type, Authorization, authtoken',
     optionsSuccessStatus: 204
 }));
 
-// Ensure Access-Control-Allow-Credentials header is explicitly set
+// Ensure Access-Control-Allow-Origin header is set for all responses
 app.use((req, res, next) => {
+    const origin = req.headers.origin;
+    if (allowedOrigins.includes(origin)) {
+        res.header('Access-Control-Allow-Origin', origin);
+    }
     res.header('Access-Control-Allow-Credentials', 'true');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, authtoken');
     next();
 });
+
+app.options('*', (req, res) => {
+    const origin = req.headers.origin;
+    if (allowedOrigins.includes(origin)) {
+        res.header('Access-Control-Allow-Origin', origin);
+    }
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, authtoken');
+    res.sendStatus(204);
+});
+
+
 
 const PORT=process.env.PORT||5000;
 
