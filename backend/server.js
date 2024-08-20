@@ -7,7 +7,7 @@ import cors from "cors";
 dotenv.config();
 const app=express();
 
-const allowedOrigins = ['https://assessnet.vercel.app', '*']; 
+const allowedOrigins = ['https://assessnet.vercel.app']; 
 app.use(cors({
     origin: (origin, callback) => {
         if (!origin) return callback(null, true);
