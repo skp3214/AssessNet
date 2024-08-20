@@ -4,6 +4,11 @@
 
 This project is a comprehensive quiz platform with environment testing capabilities. It includes features such as camera and microphone access testing, user authentication, and email score reporting. The platform is built with a robust backend for authentication and a modern frontend for user interaction.
 
+**Live Project Link :** [https://assessnet.vercel.app](https://assessnet.vercel.app) <br>
+**Api Link :** [https://assessnet-cipherschools.onrender.com](https://assessnet-cipherschools.onrender.com)
+
+*Important Note :* [During Login or Signup It can take upto 50 seconds to responds because on render it responds lately.]()
+
 ## Features
 
 - **Environment Testing:** Ensures the user's camera and microphone are working before starting the quiz.
