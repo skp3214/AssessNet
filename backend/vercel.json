@@ -14,7 +14,8 @@
         "headers": {
           "Access-Control-Allow-Origin": "https://assessnet.vercel.app",
           "Access-Control-Allow-Methods": "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
-          "Access-Control-Allow-Headers": "Content-Type, Authorization,authtoken"
+          "Access-Control-Allow-Headers": "Content-Type, Authorization,authtoken",
+          "Access-Control-Allow-Credentials":"true"
         }
       }
     ]
