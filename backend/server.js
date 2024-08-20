@@ -7,7 +7,8 @@ import cors from "cors";
 dotenv.config();
 const app=express();
 
-const allowedOrigins = ['https://assessnet.vercel.app']; 
+const allowedOrigins = ['https://assessnet.vercel.app'];
+
 app.use(cors({
     origin: (origin, callback) => {
         if (!origin) return callback(null, true);
@@ -18,10 +19,16 @@ app.use(cors({
         return callback(null, true);
     },
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
-    credentials: true,
+    credentials: true, // Ensure this is set to true
     allowedHeaders: 'Content-Type, Authorization,authtoken',
     optionsSuccessStatus: 204
 }));
+
+// Ensure Access-Control-Allow-Credentials header is explicitly set
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Credentials', 'true');
+    next();
+});
 
 const PORT=process.env.PORT||5000;
 
