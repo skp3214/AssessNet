@@ -1,6 +1,6 @@
 
 
-# AssessNet - Test Environment Platform
+# 🔠 AssessNet - Test Environment Platform 🕕
 
 This project is a comprehensive quiz platform with environment testing capabilities. It includes features such as camera and microphone access testing, user authentication, and email score reporting. The platform is built with a robust backend for authentication and a modern frontend for user interaction.
 
@@ -10,6 +10,14 @@ This project is a comprehensive quiz platform with environment testing capabilit
 - **User Authentication:** Secure user registration and login using JWTs.
 - **Dynamic Quiz:** Presents 10 questions for demo purposes, with a user-friendly interface.
 - **Email Score Reporting:** After the quiz, the user's score is automatically sent to their email using EmailJS.
+
+## Project Demo
+
+https://github.com/user-attachments/assets/08d4b593-41a3-487f-8980-41e3454f120b
+
+![alt text](image.png)
+
+![alt text](image-1.png)
 
 ### EmailJS Code Snippet
 
@@ -45,8 +53,7 @@ This project is a comprehensive quiz platform with environment testing capabilit
 
     }
 ```    
-![alt text](image.png)
-![alt text](image-1.png)
+
 
 ## Tech Stack
 
@@ -92,7 +99,7 @@ The project is divided into two main directories:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/skp3214/AssessNet.git
-   cd quiz-platform
+   cd AssessNet
    ```
 
 2. **Install dependencies:**
